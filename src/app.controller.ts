@@ -1,6 +1,5 @@
 import { Controller, Get, Param, Res } from '@nestjs/common';
 import { AppService } from './app.service';
-import { Response } from 'express';
 
 @Controller()
 export class AppController {
@@ -9,13 +8,6 @@ export class AppController {
   @Get()
   home() {
     return 'hello, welcome my server!'
-  }
-
-  @Get('/react')
-  react(@Res() res: Response) {
-    return res.sendFile('index.html', {
-      root: 'public'
-    })
   }
 
   @Get(':id')

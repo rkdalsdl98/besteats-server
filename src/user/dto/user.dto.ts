@@ -15,6 +15,7 @@ export class UserDto {
     readonly uuid: string
 
     @IsString()
+    @IsDefined()
     name: string
 
     @IsObject()
